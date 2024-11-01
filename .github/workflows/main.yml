@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # Allow manual triggering of the workflow
+  workflow_dispatch:  # Allows manual triggering
   schedule:
     - cron: "* * * * *"  # Scheduled to run every minute
 
@@ -40,3 +40,4 @@ jobs:
           force: true
           directory: "."
           github_token: ${{ secrets.FITHUB_TOKEN }}
+          github_url: https://github.com
